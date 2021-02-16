@@ -93,15 +93,18 @@ public class MoneyTransferTest {
 //    @Test
 //    void shouldTransferOverLimitOnFirstCard() {
 //        val dashboardPage = new DashboardPage();
-//        adjustmentOfTheBalance();
 //        val sum = 11000;
-//        val balanceFirstCardStart = dashboardPage.getCardBalance("5559 0000 0000 0001");
-//        val balanceSecondCardStart = dashboardPage.getCardBalance("5559 0000 0000 0002");
-//        val transferPage = dashboardPage.selectCardButton("5559 0000 0000 0001");
-//        $(withText("Пополнение карты")).shouldBe(Condition.visible);
+//    val balanceFirstCardStart = dashboardPage.getCardBalance("5559 0000 0000 0001");
+//    val balanceSecondCardStart = dashboardPage.getCardBalance("5559 0000 0000 0002");
+//    val transferPage = dashboardPage.selectCardButton("5559 0000 0000 0001");
+//    $(withText("Пополнение карты")).shouldBe(Condition.visible);
+//    $("[data-test-id=from] input").sendKeys((Keys.CONTROL + "A" + Keys.DELETE));
+//    $("[data-test-id=amount] input").sendKeys((Keys.CONTROL + "A" + Keys.DELETE));
+//    $("[data-test-id=from] input").setValue(getSecondCardInfo().getNumber());
+//    $("[data-test-id=amount] input").setValue(String.valueOf(sum));
 //        transferPage.transaction(getFirstCardInfo(), sum);
-//        $(withText("Недостаточный баланс!")).shouldBe(Condition.visible);
-//    }F
+//        $(withText("Недостаточно средств!")).shouldBe(Condition.visible);
+//    }
 
     @Test
     void shouldTransferMaxOnFirstCard() {
@@ -183,13 +186,16 @@ public class MoneyTransferTest {
 //    @Test
 //    void shouldTransferOverLimitOnSecondCard() {
 //        val dashboardPage = new DashboardPage();
-//        adjustmentOfTheBalance();
 //        val sum = 11000;
-//        val balanceFirstCardStart = dashboardPage.getCardBalance("5559 0000 0000 0001");
-//        val balanceSecondCardStart = dashboardPage.getCardBalance("5559 0000 0000 0002");
-//        val transferPage = dashboardPage.selectCardButton("5559 0000 0000 0001");
-//        $(withText("Пополнение карты")).shouldBe(Condition.visible);
+//    val balanceFirstCardStart = dashboardPage.getCardBalance("5559 0000 0000 0001");
+//    val balanceSecondCardStart = dashboardPage.getCardBalance("5559 0000 0000 0002");
+//    val transferPage = dashboardPage.selectCardButton("5559 0000 0000 0002");
+//    $(withText("Пополнение карты")).shouldBe(Condition.visible);
+//    $("[data-test-id=from] input").sendKeys((Keys.CONTROL + "A" + Keys.DELETE));
+//    $("[data-test-id=amount] input").sendKeys((Keys.CONTROL + "A" + Keys.DELETE));
+//    $("[data-test-id=from] input").setValue(getFirstCardInfo().getNumber());
+//    $("[data-test-id=amount] input").setValue(String.valueOf(sum));
 //        transferPage.transaction(getSecondCardInfo(), sum);
-//        $(withText("Недостаточный баланс!")).shouldBe(Condition.visible);
+//        $(withText("Недостаточно средств!")).shouldBe(Condition.visible);
 //    }
 }
