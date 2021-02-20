@@ -57,4 +57,13 @@ public class DashboardPage {
         val value = text.substring(start + balanceStart.length(), finish);
         return Integer.parseInt(value);
     }
+
+    public int extractFirstCardBalance() {
+        return extractBalance($("[data-test-id=\"92df3f1c-a033-48e6-8390-206f6b1f56c0\"]").text());
+    }
+
+    public int extractSecondCardBalance() {
+        return extractBalance($("[data-test-id=\"0f3f5c2a-249e-4c3d-8287-09f7a039391d\"]").text());
+
+    }
 }
